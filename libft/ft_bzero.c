@@ -6,11 +6,11 @@
 /*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 15:44:25 by virrasch          #+#    #+#             */
-/*   Updated: 2025/04/24 15:54:05 by virrasch         ###   ########.fr       */
+/*   Updated: 2025/04/29 18:23:04 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void ft_bzero(void *s, size_t n)
 {

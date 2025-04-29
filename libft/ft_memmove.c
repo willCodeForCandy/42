@@ -6,7 +6,7 @@
 /*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 13:37:45 by virrasch          #+#    #+#             */
-/*   Updated: 2025/04/29 15:31:10 by virrasch         ###   ########.fr       */
+/*   Updated: 2025/04/29 18:24:34 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 //copied from the temporary array to dest.
 //The memmove() function returns a pointer to dest.
 
-#include <unistd.h>
+#include "libft.h"
 
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
