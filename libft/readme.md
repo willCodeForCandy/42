@@ -33,7 +33,7 @@ Deberás rehacer algunas funciones de la libc. Tus funciones tendrán los mismos
 - tolower ✅✅
 - strchr ✅✅
 - strrchr ✅✅
-- strncmp
+- strncmp ✅
 - memchr
 - memcmp
 - strnstr
