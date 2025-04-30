@@ -6,7 +6,7 @@
 #    By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/22 12:13:14 by virrasch          #+#    #+#              #
-#    Updated: 2025/04/30 13:11:44 by virrasch         ###   ########.fr        #
+#    Updated: 2025/04/30 16:54:22 by virrasch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CFLAGS= -Wall -Wextra -Werror
 
 # SOURCES - OBJECTS #
 
-SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c
+SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c
 OBJ = $(SRC:.c=.o)
 
 # MAIN RULE #

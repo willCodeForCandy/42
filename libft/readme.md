@@ -25,14 +25,14 @@ Deberás rehacer algunas funciones de la libc. Tus funciones tendrán los mismos
 - strlen ✅✅
 - memset ✅✅
 - bzero ✅✅
-- memcpy ✅❌
-- memmove ❌❌
+- memcpy ✅✅
+- memmove ✅✅
 - strlcpy ✅✅
 - strlcat ✅✅
 - toupper ✅✅
 - tolower ✅✅
 - strchr ✅✅
-- strrchr ❌❌
+- strrchr ✅✅
 - strncmp
 - memchr
 - memcmp

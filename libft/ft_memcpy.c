@@ -6,7 +6,7 @@
 /*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 15:54:33 by virrasch          #+#    #+#             */
-/*   Updated: 2025/04/30 16:21:17 by virrasch         ###   ########.fr       */
+/*   Updated: 2025/04/30 17:16:23 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void *ft_memcpy(void *dest, void *src, size_t n)
 	char	*src_ptr;
 	char	*dest_ptr;
 
-	if (!src || !dest)
+	if (!src && !dest)
 		return (NULL);
 	src_ptr = (char *)src;
 	dest_ptr = (char *)dest;

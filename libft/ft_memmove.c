@@ -6,7 +6,7 @@
 /*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 13:37:45 by virrasch          #+#    #+#             */
-/*   Updated: 2025/04/30 16:21:11 by virrasch         ###   ########.fr       */
+/*   Updated: 2025/04/30 17:16:29 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char	*src_ptr;
 	char	*dest_ptr;
 
-	if (!src || !dest)
+	if (!src && !dest)
 		return (NULL);
 	src_ptr = (char *)src;
 	dest_ptr = (char *)dest;
