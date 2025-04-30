@@ -27,7 +27,7 @@ Deberás rehacer algunas funciones de la libc. Tus funciones tendrán los mismos
 - bzero ✅✅
 - memcpy ✅❌
 - memmove ❌❌
-- strlcpy ✅❌
+- strlcpy ✅✅
 - strlcat ✅✅
 - toupper ✅✅
 - tolower ✅✅
