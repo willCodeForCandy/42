@@ -1,13 +1,12 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
+/*   By: virrasch <virrasch@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/22 15:11:40 by virrasch          #+#    #+#             */
-/*   Updated: 2025/04/22 15:45:58 by virrasch         ###   ########.fr       */
+/*   Created: 2025/04/30 13:34:35 by virrasch          #+#    #+#             */
+/*   Updated: 2025/04/30 13:35:53 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +20,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	char	*ptr;
 
 	pos = 0;
-	ptr = (char *)s; // aca convertimos el puntero s a un puntero char, porque no se puede hacer aritmética de punteros ni acceder a valores con un void *
+	ptr = (char *)s;
 	while (n)
 	{
 		ptr[pos] = (char)c;

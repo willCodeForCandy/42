@@ -17,22 +17,22 @@ Hacer mi propia librería en C
 ## Funciones
 Deberás rehacer algunas funciones de la libc. Tus funciones tendrán los mismos prototipos e implementarán los mismos comportamientos que las funciones originales. Deberán ser **tal y como las describe el man**. La única diferencia será la nomenclatura. Empezarán con el prefijo “ft_”. Por ejemplo, strlen se convertirá en ft_strlen.
 ## Parte 1
-- isalpha ✅
-- isdigit ✅
-- isalnum ✅
-- isascii ✅
-- isprint ✅
-- strlen ✅
-- memset ✅
-- bzero ✅
-- memcpy ✅
-- memmove
-- strlcpy ✅
-- strlcat ✅
-- toupper ✅
-- tolower ✅
-- strchr ✅
-- strrchr
+- isalpha ✅✅
+- isdigit ✅✅
+- isalnum ✅✅
+- isascii ✅✅
+- isprint ✅✅
+- strlen ✅✅
+- memset ✅✅
+- bzero ✅✅
+- memcpy ✅❌
+- memmove ❌❌
+- strlcpy ✅❌
+- strlcat ✅✅
+- toupper ✅✅
+- tolower ✅✅
+- strchr ✅✅
+- strrchr ❌❌
 - strncmp
 - memchr
 - memcmp

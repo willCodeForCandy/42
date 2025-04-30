@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: virrasch <virrasch@student.42malaga.c      +#+  +:+       +#+         #
+#    By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/22 12:13:14 by virrasch          #+#    #+#              #
-#    Updated: 2025/04/22 12:23:09 by virrasch         ###   ########.fr        #
+#    Updated: 2025/04/30 13:11:44 by virrasch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,11 @@
 
 NAME = libft.a
 CC = cc
-FLAGS= -Wall -Wextra -Werror
+CFLAGS= -Wall -Wextra -Werror
 
 # SOURCES - OBJECTS #
 
-SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_strlen.c
+SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c
 OBJ = $(SRC:.c=.o)
 
 # MAIN RULE #
@@ -26,4 +26,20 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME):$(OBJ)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+	
+# Limpieza de archivos objeto y ejecutables
+clean:
+	rm -f $(OBJ)
+
+fclean: clean
+	rm -f $(NAME)
+
+# Regla para recompilar todo
+re:
+	make fclean
+	make all

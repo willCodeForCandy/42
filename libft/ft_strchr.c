@@ -6,7 +6,7 @@
 /*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 14:03:51 by virrasch          #+#    #+#             */
-/*   Updated: 2025/04/29 18:59:52 by virrasch         ###   ########.fr       */
+/*   Updated: 2025/04/30 13:15:46 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ char	*ft_strchr(const char *s, int c)
 	while (*s)
 	{
 		if (c == *s)
-			return (s);
+			return ((char *)s);
 		s++;
 	}
 	if (c == '\0')
-		return (s);
+		return ((char *)s);
 	return (0);
 }

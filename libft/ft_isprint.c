@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: virrasch <virrasch@student.42malaga.c      +#+  +:+       +#+        */
+/*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 17:47:43 by virrasch          #+#    #+#             */
-/*   Updated: 2025/04/21 17:52:35 by virrasch         ###   ########.fr       */
+/*   Updated: 2025/04/30 13:25:55 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }
