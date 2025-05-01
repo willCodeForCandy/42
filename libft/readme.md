@@ -34,9 +34,9 @@ Deberás rehacer algunas funciones de la libc. Tus funciones tendrán los mismos
 - strchr ✅✅
 - strrchr ✅✅
 - strncmp ✅
-- memchr
-- memcmp
-- strnstr
+- memchr ✅
+- memcmp ✅
+- strnstr ✅
 - atoi
 **Con Malloc**
 	- calloc
