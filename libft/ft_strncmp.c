@@ -6,7 +6,7 @@
 /*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 17:19:39 by virrasch          #+#    #+#             */
-/*   Updated: 2025/05/01 17:22:55 by virrasch         ###   ########.fr       */
+/*   Updated: 2025/05/01 19:22:30 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	while (n > 1 && *s1 && *s2)
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
+		if ((unsigned char)*s1 != (unsigned char)*s2)
+			return ((unsigned char)*s1 - (unsigned char)*s2);
 		n--;
 		s1++;
 		s2++;
 	}
-	return (*s1 - *s2);
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }

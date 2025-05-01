@@ -6,7 +6,7 @@
 /*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 16:57:16 by virrasch          #+#    #+#             */
-/*   Updated: 2025/05/01 17:08:34 by virrasch         ###   ########.fr       */
+/*   Updated: 2025/05/01 19:07:30 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 //If n is zero, the return value is zero.
 
 #include "libft.h"
+
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*un_s1;
