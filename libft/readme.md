@@ -34,10 +34,10 @@ Deberás rehacer algunas funciones de la libc. Tus funciones tendrán los mismos
 - strchr ✅✅
 - strrchr ✅✅
 - strncmp ✅✅
-- memchr ✅
-- memcmp ✅
-- strnstr ✅
-- atoi
+- memchr ✅✅
+- memcmp ✅✅
+- strnstr ✅✅
+- atoi ✅✅
 **Con Malloc**
 	- calloc
 	- strdup
