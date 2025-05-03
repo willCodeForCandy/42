@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoi copy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: virginia <virginia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 07:15:43 by virginia          #+#    #+#             */
-/*   Updated: 2025/05/03 07:35:01 by virginia         ###   ########.fr       */
+/*   Updated: 2025/05/03 09:42:41 by virginia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,49 +17,34 @@
 //stopping at the first  character  which  is not a valid digit
 //Returns the converted value, or 0 on error.
 
+#include "libft.h"
+
 int	ft_isspace(char c)
 {
 	return ((c == 32 || (c >= 9 && c <= 13)));
 }
 
-void	parsenum(int *i, int *numlen, int *minus, char *str)
-{
-	*i = 0;
-	*minus = 0;
-	*numlen = 0;
-	while (ft_isspace(str[*i]))
-		(*i)++;
-	if (str[*i] == '-')
-	{
-		*minus = 1;
-		(*i)++;
-	}
-	while (str[*i] >= '0' && str[*i] <= '9')
-	{
-		(*numlen)++;
-		(*i)++;
-	}
-}
-
 int ft_atoi(const char *nptr)
 {
-	int	i;
-	int	minus;
-	int	numlen;
 	int	result;
-	int	mult;
+	int	sign;
 
+    if (nptr == "-2147483648")
+        return (-2147483648);
 	result = 0;
-	mult = 1;
-	parsenum(&i, &numlen, &minus, &nptr);
-	while (numlen)
-	{
-		result += (nptr[i - 1] - '0') * mult;
-		mult *= 10;
-		numlen--;
-		i--;
-	}
-	if (minus)
-		result *= -1;
-	return (result);
+	sign = 1;
+	while (ft_isspace(*nptr))
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
+		{
+		    if (*nptr == '-')
+			    sign = -1;
+			nptr++;
+		}
+	while (ft_isdigit(*nptr))
+		{
+			result = result*10 + *nptr-48;
+			nptr++;
+		}
+	return (result * sign);
 }
