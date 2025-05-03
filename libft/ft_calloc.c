@@ -6,7 +6,7 @@
 /*   By: virginia <virginia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 10:35:32 by virginia          #+#    #+#             */
-/*   Updated: 2025/05/03 15:04:06 by virginia         ###   ########.fr       */
+/*   Updated: 2025/05/03 15:17:34 by virginia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ void *ft_calloc(size_t nmemb, size_t size)
 	void	*mem_ptr;
 
 	total_size = nmemb * size;
-	if (total_size > 2147483647)
-		return (NULL);
 	mem_ptr = (void *)malloc(total_size);
+	if (!mem_ptr)
+		return (NULL);
 	ft_bzero(mem_ptr, total_size);
 	return (mem_ptr);
 }

@@ -39,8 +39,8 @@ Deberás rehacer algunas funciones de la libc. Tus funciones tendrán los mismos
 - strnstr ✅✅
 - atoi ✅✅
 **Con Malloc**
-	- calloc
-	- strdup
+	- calloc ✅✅
+	- strdup ✅✅
 
 ## Parte 2
 - ft_substr
