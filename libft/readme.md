@@ -43,8 +43,8 @@ Deberás rehacer algunas funciones de la libc. Tus funciones tendrán los mismos
 	- strdup ✅✅
 
 ## Parte 2
-- ft_substr
-- ft_strjoins
+- ft_substr ✅✅
+- ft_strjoin ✅✅
 - ft_strtrim
 - ft_split
 - ft_itoa
