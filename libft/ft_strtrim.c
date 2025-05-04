@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: virginia <virginia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/29 15:44:13 by virrasch          #+#    #+#             */
-/*   Updated: 2025/05/04 09:11:13 by virginia         ###   ########.fr       */
+/*   Created: 2025/05/04 09:46:39 by virginia          #+#    #+#             */
+/*   Updated: 2025/05/04 16:41:37 by virginia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcpy(char *dst, const char *src, size_t size)
+char *ft_strtrim(char const *s1, char const *set)
 {
-	size_t src_len;
-	size_t i;
+	char	*trimmed_str;
+	size_t	start;
+	size_t	end;
 
-	src_len = ft_strlen(src);
-	if (!dst || size == 0)
-		return (src_len);
-	i = 0;
-	while (src[i] && i < size - 1)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (src_len);
+	if(!s1 || !set)
+		return (s1);
+	start = 0;
+	end = ft_strlen(s1);
+	while (ft_strchr(set[start], (int)*s1))
+		start++;
+	while (ft_strrchr(set[end], (int)*s1))
+		end--;
+	trimmed_str = ft_substr(s1, (unsigned int)start, end - start + 1);
+	return (trimmed_str);
 }
