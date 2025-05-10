@@ -6,7 +6,7 @@
 /*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 18:54:45 by virrasch          #+#    #+#             */
-/*   Updated: 2025/04/30 17:17:21 by virrasch         ###   ########.fr       */
+/*   Updated: 2025/05/10 17:26:41 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,25 +18,25 @@
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	size_t	len;
 	char	*aux;
 
-    len = ft_strlen(s);
-    if ((char)c == '\0')
-        {
-            aux = (char *)&s[len];
-            return aux;
-        }
-    while (len > 0)
-    {
-        if (s[len-1] == (char)c)
-        {
-            aux = (char *)&s[len-1];
-            return aux;
-        }
-        len--;
-    }
-    return (NULL);
+	len = ft_strlen(s);
+	if ((char)c == '\0')
+	{
+		aux = (char *)&s[len];
+		return (aux);
+	}
+	while (len > 0)
+	{
+		if (s[len - 1] == (char)c)
+		{
+			aux = (char *)&s[len - 1];
+			return (aux);
+		}
+		len--;
+	}
+	return (NULL);
 }

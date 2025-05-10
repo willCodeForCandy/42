@@ -6,13 +6,14 @@
 /*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 07:15:43 by virginia          #+#    #+#             */
-/*   Updated: 2025/05/10 14:10:04 by virrasch         ###   ########.fr       */
+/*   Updated: 2025/05/10 17:50:07 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //The  atoi() function converts the initial portion of the string pointed
 //to by nptr to int
-//The  string may begin with an arbitrary amount of white space (as determined by isspace(3)) followed by a sin‐
+//The  string may begin with an arbitrary amount of white space
+//(as determined by isspace(3)) followed by a sin‐
 //gle optional '+' or '-' sign.
 //stopping at the first  character  which  is not a valid digit
 //Returns the converted value, or 0 on error.
@@ -24,7 +25,7 @@ int	ft_isspace(char c)
 	return ((c == 32 || (c >= 9 && c <= 13)));
 }
 
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int	result;
 	int	sign;
@@ -34,15 +35,15 @@ int ft_atoi(const char *nptr)
 	while (ft_isspace(*nptr))
 		nptr++;
 	if (*nptr == '-' || *nptr == '+')
-		{
-		    if (*nptr == '-')
-			    sign = -1;
-			nptr++;
-		}
+	{
+		if (*nptr == '-')
+			sign = -1;
+		nptr++;
+	}
 	while (ft_isdigit(*nptr))
-		{
-			result = result * 10 + (*nptr - 48);
-			nptr++;
-		}
+	{
+		result = result * 10 + (*nptr - 48);
+		nptr++;
+	}
 	return (result * sign);
 }

@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/04 09:46:39 by virginia          #+#    #+#             */
-/*   Updated: 2025/05/10 17:52:17 by virrasch         ###   ########.fr       */
+/*   Created: 2025/05/10 17:10:14 by virrasch          #+#    #+#             */
+/*   Updated: 2025/05/10 17:17:30 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+void ft_putstr_fd(char *s, int fd)
 {
-	char	*trimmed_str;
-	size_t	start;
-	size_t	end;
-
-	if (!s1 || !set)
-		return ((char *)s1);
-	start = 0;
-	end = ft_strlen(s1);
-	while (ft_strchr(set, (int)s1[start]))
-		start++;
-	while (ft_strrchr(set, (int)s1[end]))
-		end--;
-	trimmed_str = ft_substr(s1, (unsigned int)start, end - start + 1);
-	return (trimmed_str);
+	while (*s)
+	{
+		write(fd, s, 1);
+		s++;
+	}
 }

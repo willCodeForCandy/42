@@ -6,7 +6,7 @@
 /*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 10:35:32 by virginia          #+#    #+#             */
-/*   Updated: 2025/05/10 10:53:12 by virrasch         ###   ########.fr       */
+/*   Updated: 2025/05/10 17:50:20 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 #include "libft.h"
 
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	total_size;
 	void	*mem_ptr;
