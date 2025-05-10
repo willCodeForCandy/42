@@ -6,7 +6,7 @@
 /*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 17:15:08 by virrasch          #+#    #+#             */
-/*   Updated: 2025/05/10 17:23:16 by virrasch         ###   ########.fr       */
+/*   Updated: 2025/05/10 17:55:26 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-		char	c;
+	char	c;
 
 	if (n == -2147483648)
 	{

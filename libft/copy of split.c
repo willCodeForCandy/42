@@ -18,40 +18,63 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
+char	*save_word(char *start, char c)
+{
+	size_t	len;
+	char	*end;
+
+	end = ft_strchr(start, c);
+	if (end)
+	{
+		len = end - start;
+		return (ft_substr(start, 0, len + 1));
+	}
+	else
+	{
+		return (ft_strdup(start));
+	}
+}
+
 char	**ft_split(char const *s, char c)
 {
-	char	*trimmed;
+	//char	*trimmed;
 	char	**arr;
 	size_t	i;
+	size_t	words;
 	size_t	count;
 
 	if (!(*s) || !c)
 		return (s);
-	count = count_words(s, c);
-	arr = ft_calloc((size_t)count, sizeof(char *));
+	words = count_words(s, c);
+	arr = ft_calloc((size_t)words + 1, sizeof(char *));
 	if (!arr)
 		return (NULL);
-	trimmed = ft_strtrim(s, (const char *)&c);
-	i = 1;
+	//trimmed = ft_strtrim(s, (const char *)&c);
+	i = 0;
 	count = 0;
-	arr[count] = trimmed[0];
-	while (trimmed[i])
+	//arr[count] = trimmed[0];
+	while (count <= words)
 	{
-		if (trimmed[i] == c)
+			if (s[i] != c && (s[i - 1] == c || i == 0))
 			{
-				if (trimmed[i - 1] != c)
-				{
-					trimmed[i] = '\0';
-					count++;
-				}
+				arr[count] = save_word(s[i], c);
+				count++;
 			}
-		else
-		{
-			if (trimmed[i - 1] == c || trimmed[i - 1] == '\0')
-				arr[count] = &trimmed[i];
-		}
 		i++;
 	}
-	trimmed[i] == '\0';
 	return (arr);
 }
+		// if (trimmed[i] == c)
+		// 	{
+		// 		if (trimmed[i - 1] != c)
+		// 		{
+		// 			trimmed[i] = '\0';
+		// 			count++;
+		// 		}
+		// 	}
+		// else
+		// {
+		// 	if (trimmed[i - 1] == c || trimmed[i - 1] == '\0')
+		// 		arr[count] = &trimmed[i];
+		// }
+		// i++;

@@ -6,13 +6,13 @@
 /*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 17:10:14 by virrasch          #+#    #+#             */
-/*   Updated: 2025/05/10 17:17:30 by virrasch         ###   ########.fr       */
+/*   Updated: 2025/05/10 17:56:05 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	while (*s)
 	{
