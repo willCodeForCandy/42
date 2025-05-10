@@ -6,7 +6,7 @@
 /*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 13:13:57 by virrasch          #+#    #+#             */
-/*   Updated: 2025/05/10 15:04:42 by virrasch         ###   ########.fr       */
+/*   Updated: 2025/05/10 16:33:03 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,18 @@
 unsigned int	ft_numlen(int n)
 {
 	unsigned int	len;
+	long			nb;
 
 	len = 1;
-	if (n < 0)
+	nb = n;
+	if (nb < 0)
 	{
 		len++;
-		n = -n;
+		nb = -nb;
 	}
-	while (n > 9)
+	while (nb > 9)
 	{
-		n /= 10;
+		nb /= 10;
 		len++;
 	}
 	return (len);
@@ -34,29 +36,26 @@ char	*ft_itoa(int n)
 {
 	char			*alpha;
 	unsigned int	len;
+	long			nb;
 
 	len = ft_numlen(n);
 	alpha = malloc(len + 1);
 	if (!alpha)
 		return (NULL);
-	if (n == -2147483648)
-	{
-		alpha = "-2147483648";
-		return alpha;
-	}
 	alpha[len] = '\0';
 	len--;
-	if (n < 0)
+	nb = n;
+	if (nb < 0)
 	{
 		alpha[0] = '-';
-		n = -n;
+		nb = -nb;
 	}
-	while (n > 9)
+	while (nb > 9)
 	{
-		alpha[len] = n % 10 + '0';
-		n /= 10;
+		alpha[len] = nb % 10 + '0';
+		nb /= 10;
 		len--;
 	}
-	alpha[len] = n + '0';
+	alpha[len] = nb + '0';
 	return (alpha);
 }
