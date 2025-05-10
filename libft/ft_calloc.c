@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: virginia <virginia@student.42.fr>          +#+  +:+       +#+        */
+/*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 10:35:32 by virginia          #+#    #+#             */
-/*   Updated: 2025/05/03 15:17:34 by virginia         ###   ########.fr       */
+/*   Updated: 2025/05/10 10:53:12 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//The calloc() function allocates memory for an array of  nmemb  elements
 //of  size bytes each and returns a pointer to the allocated memory.  The
 //memory is set to zero.  If nmemb or size is 0, then calloc() returns  a
 //unique pointer value that can later be successfully passed to free().

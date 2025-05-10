@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi .c                                         :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: virginia <virginia@student.42.fr>          +#+  +:+       +#+        */
+/*   By: virrasch <virrasch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 07:15:43 by virginia          #+#    #+#             */
-/*   Updated: 2025/05/03 10:01:43 by virginia         ###   ########.fr       */
+/*   Updated: 2025/05/10 14:10:04 by virrasch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int ft_atoi(const char *nptr)
 		}
 	while (ft_isdigit(*nptr))
 		{
-			result = result*10 + *nptr-48;
+			result = result * 10 + (*nptr - 48);
 			nptr++;
 		}
 	return (result * sign);
